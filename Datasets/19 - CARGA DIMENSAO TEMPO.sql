@@ -1,3 +1,9 @@
+create database calendar
+go
+
+use calendar
+go
+
 		-------------------------------
 		--CRIANDO A DIMENSÃO TEMPO--
 		-------------------------------
@@ -77,18 +83,18 @@
 
 				 CASE DATENAME(MONTH,@DATA) 
 			
-					WHEN 'January' THEN 'Janeiro'
-					WHEN 'February' THEN 'Fevereiro'
-					WHEN 'March' THEN 'Março'
-					WHEN 'April' THEN 'Abril'
-					WHEN 'May' THEN 'Maio'
-					WHEN 'June' THEN 'Junho'
-					WHEN 'July' THEN 'Julho'
-					WHEN 'August' THEN 'Agosto'
-					WHEN 'September' THEN 'Setembro'
-					WHEN 'October' THEN 'Outubro'
-					WHEN 'November' THEN 'Novembro'
-					WHEN 'December' THEN 'Dezembro'
+					WHEN 'Janeiro' THEN 'Janeiro'
+					WHEN 'Fevereiro' THEN 'Fevereiro'
+					WHEN 'Março' THEN 'Março'
+					WHEN 'Abril' THEN 'Abril'
+					WHEN 'Maio' THEN 'Maio'
+					WHEN 'Junho' THEN 'Junho'
+					WHEN 'Julho' THEN 'Julho'
+					WHEN 'Agosto' THEN 'Agosto'
+					WHEN 'Setembro' THEN 'Setembro'
+					WHEN 'Outubro' THEN 'Outubro'
+					WHEN 'Novembro' THEN 'Novembro'
+					WHEN 'Dezembro' THEN 'Dezembro'
 		
 				END AS NOMEMES,
 		 
@@ -177,3 +183,5 @@
 		CLOSE C_TEMPO
 		DEALLOCATE C_TEMPO
 		GO
+
+		select * from DIM_TEMPO
